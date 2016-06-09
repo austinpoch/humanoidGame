@@ -35,7 +35,7 @@ public class HelpMenuView {
         
         do{
             //prompt for and get players name
-            String menuOption = this.getMenuOption();
+            String menuOption = this.getInput();
             if (menuOption.toUpperCase().equals("Q"))// user wants to quit
                 return; // exit game
             
@@ -45,8 +45,8 @@ public class HelpMenuView {
         }while (!done);
     }
 
-    private String getMenuOption() {
-       Scanner keyboard = new Scanner(System.in);//get infile for keyboard
+    private String getInput() {
+        Scanner keyboard = new Scanner(System.in);//get infile for keyboard
         String value = "";// value to be returned
         boolean valid = false; // initalized to not valid
         
@@ -72,18 +72,18 @@ public class HelpMenuView {
         menuOption = menuOption.toUpperCase(); // convert to uppercase
         
         switch (menuOption){
-            case "O": // create and start new game
+            case "O": // game goal
                 this.gameGoal();
                 break;
-            case "H": // get and start an existing game
+            case "H": // hint
                 this.hint();
                 break;
             case "M": // display main menu
                 MainMenuView mainMenuView = new MainMenuView();
                 mainMenuView.displayMainMenuView();
                 break;
-            case "G": // save game
-                this.gamePlayMenu();
+            case "G": // game play menu
+                this.gameMenuView();
                 break;
             default:
                 System.out.println("\n*** Invalid selection ** Try again");
@@ -100,7 +100,8 @@ public class HelpMenuView {
           System.out.println("*** hint called ***");
     }
 
-    private void gamePlayMenu() {
-          System.out.println("*** gamePlayMenu called ***");
+    private void gameMenuView() {
+         GameMenuView gameMenuView = new GameMenuView();
+         gameMenuView.displayGameMenuView();
     }
 }

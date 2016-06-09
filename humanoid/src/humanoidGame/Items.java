@@ -36,7 +36,7 @@ public class Items {
     }
 
     public void setGold(int gold) {
-        this.gold = gold;
+        this.gold += gold;
     }
 
     public int getIron() {

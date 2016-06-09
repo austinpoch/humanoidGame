@@ -14,7 +14,7 @@ public class LocationControl {
      int output = 0;
      
      if (iron >= 18 || iron <= 36 || lbsPerGun == 1 || lbsPerGun == 3 || 
-        lbsPerGun == 6 || lbsPerSword == 1 || lbsPerGun == 3 || lbsPerGun == 6){
+        lbsPerGun == 6 || lbsPerSword == 1 || lbsPerSword == 3 || lbsPerSword == 6){
         output = (iron - (lbsPerGun * 3)) / lbsPerSword;
          return output;
      }

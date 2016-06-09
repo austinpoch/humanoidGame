@@ -41,7 +41,7 @@ public class MainMenuView {
         
         do{
             //prompt for and get players name
-            String menuOption = this.getMenuOption();
+            String menuOption = this.getInput();
             if (menuOption.toUpperCase().equals("Q"))// user wants to quit
                 return; // exit game
             
@@ -51,7 +51,7 @@ public class MainMenuView {
         }while (!done);
     }
     
-    private String getMenuOption() {
+    private String getInput() {
         
         Scanner keyboard = new Scanner(System.in);//get infile for keyboard
         String value = "";// value to be returned
@@ -98,12 +98,13 @@ public class MainMenuView {
     }
 
     private void startNewGame() {
+        
        // create a new game
        GameControl.createNewGame(Humanoid.getPlayer());
-       
+             
        // display the game
        GameMenuView gameMenu = new GameMenuView();
-       gameMenu.displayMenu();
+       gameMenu.displayGameMenuView();
     }
 
     private void startExistingGame() {

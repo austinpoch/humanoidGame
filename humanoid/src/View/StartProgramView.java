@@ -111,11 +111,10 @@ public class StartProgramView {
                          + "\n We hope you have a lot of fun!"
                          + "\n====================================="
                          );
-        // create MainMenuView object
-        MainMenuView mainMenuView = new MainMenuView();
+        // create HumanoidTypeView object
+        HumanoidTypeView humanoidTypeView = new HumanoidTypeView();
         
         // display main menu view
-        mainMenuView.displayMainMenuView();
-    }
-
+        humanoidTypeView.displayHumanoidTypeView();
+    } 
 }
