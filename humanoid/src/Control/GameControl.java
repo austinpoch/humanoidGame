@@ -5,10 +5,31 @@
  */
 package Control;
 
+import humanoid.Humanoid;
+import humanoidGame.Player;
+
 /**
  *
  * @author Austin Poch
  */
 public class GameControl {
+
+    public static Player createPlayer(String playersName) {
+       
+        if (playersName == null){
+            return null;
+        }
+        
+        Player player = new Player();
+        player.setName(playersName);
+        
+        Humanoid.setPlayer(player); // save the player
+        
+        return player;
+    }
+
+    public static void createNewGame(Player player) {
+       System.out.println("\n*** createNewGame stub called ***");
+    }
     
 }
