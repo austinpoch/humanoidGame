@@ -103,8 +103,8 @@ public class MainMenuView {
        GameControl.createNewGame(Humanoid.getPlayer());
              
        // display the game
-       GameMenuView gameMenu = new GameMenuView();
-       gameMenu.displayGameMenuView();
+       HumanoidTypeView humanoidTypeView = new HumanoidTypeView();
+       humanoidTypeView.displayHumanoidTypeView();
     }
 
     private void startExistingGame() {

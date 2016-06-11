@@ -12,55 +12,54 @@ import java.util.Scanner;
  *
  * @author Austin Poch
  */
-public class IronShopView {
+class GunShopView {
     private String menu;
       
-    public IronShopView() {
+    public GunShopView() {
         this.menu = ("\n*************************************************"
                    + "\n*                                               *"
-                   + "\n* To get the iron you must be able to solve a   *"
-                   + "\n* complex equation. You will be prompted to     *"
-                   + "\n* input three numbers within certain ranges. The*"
-                   + "\n* three numbers will be used in the equation.   *"
-                   + "\n* If there are A pounds of iron, and it takes B *"                    
-                   + "\n* pounds to make a gun and C pounds to make a   *"                  
-                   + "\n* sword, how many swords can be made if there   *"
-                   + "\n* are already 3 guns?                           *"                
+                   + "\n* To get the gun powder you must be able to     *"
+                   + "\n* slove a complex equation. If you have 'A'     *"
+                   + "\n* number of magazines for your gun, and they    *"
+                   + "\n* all take 'B' rounds each, and the bullets     *"
+                   + "\n* take 'C' grains of gun powder each, how much  *"                    
+                   + "\n* gun powder does it take to load all of the    *"                  
+                   + "\n* magazines?                                    *"           
                    + "\n*                                               *"
                    + "\n*************************************************"
                       );
     }
-    public void displayIronShopView() {
+    public void displayGunShopView() {
        
         boolean done = false; // set flag to not done
         
         System.out.println(menu);
         
         do{
-            System.out.println("\nPounds of Iron (18-36): ");
-            int lbsOfIron = this.getLbsOfIronInput();
-            System.out.println("\nPounds per gun (1, 3 or 6): ");
-            int lbsPerGun = this.getLbsPerGunInput();
-            System.out.println("\nPounds per sword(1, 3 or 6): ");
-            int lbsPerSword = this.getLbsPerSwordInput();
-            System.out.println("\nAnwser (0-33): ");
+            System.out.println("\nGun magazines (1-5): ");
+            int mags = this.getMagsInput();
+            System.out.println("\nGun rounds (10-20): ");
+            int rounds = this.getRoundsInput();
+            System.out.println("\nGrain of gun powder (100-150): ");
+            int grains = this.getGrainsInput();
+            System.out.println("\nAnwser (1000-15000): ");
             int anwser = this.getAnwserInput();
             
-            done = this.doAction(lbsOfIron, lbsPerGun, lbsPerSword, anwser);
+            done = this.doAction(mags, rounds, grains, anwser);
             
         }while (!done);
     }
 
-    private int getLbsOfIronInput() {
+    private int getMagsInput() {
         Scanner keyboard = new Scanner(System.in);
         boolean done = false;
         int number = 0;
         
         while (!done){ // loop while an invalid value is entered
             number = keyboard.nextInt();
-            if (number < 18 && number > 36) { 
-                System.out.println("\nInvalad value, choose a number between 18"
-                                   + " and 36 ");
+            if (number < 1 & number > 5) { 
+                System.out.println("\nInvalad value, choose a number between 1"
+                                   + " and 5 ");
                 continue;
             }
             
@@ -69,39 +68,37 @@ public class IronShopView {
         return number; // return the value entered
     }
 
-    private int getLbsPerGunInput() {
+    private int getRoundsInput() {
         Scanner keyboard = new Scanner(System.in);
         boolean done = false;
         int number = 0;
         
         while (!done){ // loop while an invalid value is entered
             number = keyboard.nextInt();
-            if (number != 1 ^
-                number != 3 ^
-                number != 6){
-                System.out.println("\nInvalad value, choose either 1, 3 or 6");
-                continue; 
+            if (number < 10 & number > 20) { 
+                System.out.println("\nInvalad value, choose a number between 10"
+                                   + " and 20 ");
+                continue;
             }
             
-                break; //end the loop       
+            break; //end the loop         
         }
         return number; // return the value entered
     }
 
-    private int getLbsPerSwordInput() {
+    private int getGrainsInput() {
         Scanner keyboard = new Scanner(System.in);
         boolean done = false;
         int number = 0;
         
         while (!done){ // loop while an invalid value is entered
             number = keyboard.nextInt();
-            if (number != 1 ^
-                number != 3 ^
-                number != 6){
-                System.out.println("\nInvalad value, choose either 1, 3 or 6");
-                continue; 
-            } 
-                        
+            if (number < 100 & number > 150) { 
+                System.out.println("\nInvalad value, choose a number between 100"
+                                   + " and 150 ");
+                continue;
+            }
+            
             break; //end the loop         
         }
         return number; // return the value entered
@@ -114,10 +111,9 @@ public class IronShopView {
         
         while (!done){ // loop while an invalid value is entered
             number = keyboard.nextInt();
-            if (number < 0 &
-                number > 33) { 
-                System.out.println("\nInvalad value, choose a number between 0"
-                                   + " and 33 ");
+            if (number < 1000 & number > 15000) { 
+                System.out.println("\nInvalad value, choose a number between "
+                                   + "1000 and 15000 ");
                 continue;
             }
             
@@ -126,9 +122,9 @@ public class IronShopView {
         return number; // return the value entered
     }
 
-    private boolean doAction(int lbsOfIron, int lbsPerGun, int lbsPerSword, int anwser) {
+    private boolean doAction(int mags, int rounds, int grains, int anwser) {
         LocationControl locationControl = new LocationControl();
-        int match = locationControl.ironShopCalculations(lbsOfIron, lbsPerGun, lbsPerSword);
+        int match = locationControl.gunShopCalculations(mags, rounds, grains);
         
         if (match == anwser){
         this.correct();
@@ -145,7 +141,7 @@ public class IronShopView {
                          + "\n*                                  *"
                          + "\n*   Congratulations! You got the   *"
                          + "\n*    anwser correct! You will      *"
-                         + "\n*         recieve 5 Iron           *"
+                         + "\n*     recieve 1000 gun powder      *"
                          + "\n*                                  *"
                          + "\n************************************"
                          );
@@ -155,13 +151,14 @@ public class IronShopView {
         System.out.println("\n************************************"
                          + "\n*                                  *"
                          + "\n*      Better luck next time,      *"
-                         + "\n*       you recieve no Iron        *"
+                         + "\n*    you recieve no gun powder     *"
                          + "\n*                                  *"
                          + "\n************************************"
                          );
     }
+
     private void gameMenuView() {
-         GameMenuView gameMenuView = new GameMenuView();
-         gameMenuView.displayGameMenuView();
+        GameMenuView gameMenuView = new GameMenuView();
+        gameMenuView.displayGameMenuView();
     }
 }

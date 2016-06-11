@@ -104,7 +104,8 @@ public class GameMenuView {
     }
 
     private void newLocation() {
-        System.out.println("\n*** newLocation called ***");
+        NewLocationView newLocationView = new NewLocationView();
+        newLocationView.displayNewLocationView();
     }
 
     private void viewLocations() {

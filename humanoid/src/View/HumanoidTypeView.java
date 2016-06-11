@@ -91,6 +91,7 @@ class HumanoidTypeView {
                 break;
             default:
                 System.out.println("\n*** Invalid selection ** Try again");
+                this.getInput();
                 break;
         }
         this.displayNextView();
@@ -100,7 +101,7 @@ class HumanoidTypeView {
 
 
     private void humanoidOne() {
-        System.out.println("\n*****************************************"
+        System.out.println("\n******************************************"
                          + "\n*                                        *"
                          + "\n*     Congratulations! you are now a     *"
                          + "\n*               Humanoid 1               *"
@@ -130,7 +131,7 @@ class HumanoidTypeView {
     }
     
     private void displayNextView() {
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayGameMenuView();
+        GameMenuView gameMenuView = new GameMenuView();
+        gameMenuView.displayGameMenuView();
     }
 }

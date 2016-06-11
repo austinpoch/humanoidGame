@@ -17,26 +17,26 @@ public class GoldMineView {
     private String menu;
     
     public GoldMineView() {
-        System.out.println("\n*************************************************"
-                         + "\n*                                               *"
-                         + "\n* You enter the gold mine and there is a guard  *"
-                         + "\n* standing in your way, you need to get past    *"
-                         + "\n* him in order to get the gold you need, so you *"
-                         + "\n* think up a plan. If you can trick the guard,  *"
-                         + "\n* you will be able to get all the gold you need.*"
-                         + "\n*                                               *"
-                         + "\n* Should You:                                   *"
-                         + "\n*                                               *"
-                         + "\n* A - Tell him you saw his wife slip and fall   *"
-                         + "\n* B - Tell him someone put poison in his wifes  *"
-                         + "\n*     lunch and she has not eaten it yet        *"
-                         + "\n* C - Tell him you saw a shady character at his *"
-                         + "\n*     house                                     *"
-                         + "\n* D - Tell him that you need some of that gold  *"
-                         + "\n*     right behind him                          *"
-                         + "\n*                                               *"
-                         + "\n*************************************************"
-                         );
+        this.menu = "\n*************************************************"
+                  + "\n*                                               *"
+                  + "\n* You enter the gold mine and there is a guard  *"
+                  + "\n* standing in your way, you need to get past    *"
+                  + "\n* him in order to get the gold you need, so you *"
+                  + "\n* think up a plan. If you can trick the guard,  *"
+                  + "\n* you will be able to get all the gold you need.*"
+                  + "\n*                                               *"
+                  + "\n* Should You:                                   *"
+                  + "\n*                                               *"
+                  + "\n* A - Tell him you saw his wife slip and fall   *"
+                  + "\n* B - Tell him someone put poison in his wifes  *"
+                  + "\n*     lunch and she has not eaten it yet        *"
+                  + "\n* C - Tell him you saw a shady character at his *"
+                  + "\n*     house                                     *"
+                  + "\n* D - Tell him that you need some of that gold  *"
+                  + "\n*     right behind him                          *"
+                  + "\n*                                               *"
+                  + "\n*************************************************"
+                  ;
     }
     void displayGoldMineView() {
         boolean done = false; // set flag to not done
@@ -56,7 +56,7 @@ public class GoldMineView {
     }
 
     private String getInput() {
-         Scanner keyboard = new Scanner(System.in);//get infile for keyboard
+        Scanner keyboard = new Scanner(System.in);//get infile for keyboard
         String value = "";// value to be returned
         boolean valid = false; // initalized to not valid
         
