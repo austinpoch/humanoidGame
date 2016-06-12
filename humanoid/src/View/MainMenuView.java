@@ -32,7 +32,8 @@ public class MainMenuView {
                 + "\nQ - Quit"
                 + "\n-----------------------------";
     }
-
+        
+        // displays 'menu', if 'Q' is pressed quit
     public void displayMainMenuView() {
        
         boolean done = false; // set flag to not done
@@ -51,6 +52,7 @@ public class MainMenuView {
         }while (!done);
     }
     
+        // gets input from user
     private String getInput() {
         
         Scanner keyboard = new Scanner(System.in);//get infile for keyboard
@@ -73,6 +75,7 @@ public class MainMenuView {
         return value; // return the value entered
     }
 
+        // makes input uppercase and determines the selection
     private boolean doAction(String menuOption) {
        
         menuOption = menuOption.toUpperCase(); // convert to uppercase
@@ -97,6 +100,7 @@ public class MainMenuView {
         return false;
     }
 
+        
     private void startNewGame() {
         
        // create a new game
