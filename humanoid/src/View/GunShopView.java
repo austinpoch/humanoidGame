@@ -159,6 +159,6 @@ class GunShopView {
 
     private void gameMenuView() {
         GameMenuView gameMenuView = new GameMenuView();
-        gameMenuView.displayGameMenuView();
+        gameMenuView.display();
     }
 }

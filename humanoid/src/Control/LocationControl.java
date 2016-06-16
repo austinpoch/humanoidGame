@@ -23,7 +23,8 @@ public class LocationControl {
      }
    
    public int gunShopCalculations(int mags, int rounds, int grains){
-     int output = 0;
+     
+       int output = 0;
      
      if (1 <= mags || mags <= 5 || 10 <= rounds || rounds <= 20 || 
              100 <= grains || grains <= 150){

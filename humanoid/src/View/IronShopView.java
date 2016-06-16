@@ -162,6 +162,6 @@ public class IronShopView {
     }
     private void gameMenuView() {
          GameMenuView gameMenuView = new GameMenuView();
-         gameMenuView.displayGameMenuView();
+         gameMenuView.display();
     }
 }

@@ -5,69 +5,28 @@
  */
 package View;
 
-import java.util.Scanner;
-
 /**
  *
  * @author Austin Poch
  */
-public class HelpMenuView {
-    private String menu;
-    
+public class HelpMenuView extends View{
+        
     public HelpMenuView() {
-        this.menu = "\n"
-                + "\n-----------------------------"
-                + "\n| Help Menu                 |"
-                + "\n-----------------------------"
-                + "\nO - Game Goal"
-                + "\nH - Hint"
-                + "\nM - Main Menu"
-                + "\nG - Game Play Menu"
-                + "\nQ - Quit"
-                + "\n-----------------------------";
-    }
-
-
-    void displayHelpMenuView() {
-        boolean done = false; // set flag to not done
         
-        System.out.println(menu);
-        
-        do{
-            //prompt for and get players name
-            String menuOption = this.getInput();
-            if (menuOption.toUpperCase().equals("Q"))// user wants to quit
-                return; // exit game
-            
-            // do the requested action and display the next view
-            done = this. doAction(menuOption);
-            
-        }while (!done);
+        super("\n"
+            + "\n-----------------------------"
+            + "\n| Help Menu                 |"
+            + "\n-----------------------------"
+            + "\nO - Game Goal"
+            + "\nH - Hint"
+            + "\nM - Main Menu"
+            + "\nG - Game Play Menu"
+            + "\nQ - Quit"
+            + "\n-----------------------------");
     }
-
-    private String getInput() {
-        Scanner keyboard = new Scanner(System.in);//get infile for keyboard
-        String value = "";// value to be returned
-        boolean valid = false; // initalized to not valid
-        
-        while (!valid){ // loop while an invalid value is entered
-            System.out.println("\nPlease enter an option: ");
-            
-            value = keyboard.nextLine(); // get next line typed on keyboard
-            value = value.trim(); // trim off leading and trailing blanks
-            
-            if (value.length() < 1) { // value is blank
-                System.out.println("\nInvalad value: value can not be blank");
-                continue;
-            }
-            
-            break; //end the loop         
-        }
-        return value; // return the value entered
-    }
-
-
-    private boolean doAction(String menuOption) {
+    
+    @Override
+    public boolean doAction(String menuOption) {
         
         menuOption = menuOption.toUpperCase(); // convert to uppercase
         
@@ -80,7 +39,7 @@ public class HelpMenuView {
                 break;
             case "M": // display main menu
                 MainMenuView mainMenuView = new MainMenuView();
-                mainMenuView.displayMainMenuView();
+                mainMenuView.display();
                 break;
             case "G": // game play menu
                 this.gameMenuView();
@@ -102,6 +61,6 @@ public class HelpMenuView {
 
     private void gameMenuView() {
          GameMenuView gameMenuView = new GameMenuView();
-         gameMenuView.displayGameMenuView();
+         gameMenuView.display();
     }
 }

@@ -12,65 +12,25 @@ import java.util.Scanner;
  *
  * @author Austin Poch
  */
-class HumanoidTypeView {
-    
-    private final String menu;
+class HumanoidTypeView extends View {
     
     public HumanoidTypeView(){
     
-        this.menu = ("\n****************************************************"
-                   + "\n*                                                  *"
-                   + "\n* There are three types of humanoids in this game. *"      
-                   + "\n* You must choose a type of humanoid to play with  *"
-                   + "\n* as your character.                               *"
-                   + "\n*                                                  *"
-                   + "\n*                  A - Humanoid 1                  *"
-                   + "\n*                  B - Humanoid 2                  *"
-                   + "\n*                  C - Humanoid 3                  *"
-                   + "\n*                                                  *"
-                   + "\n****************************************************"
-                   );
-    }
-    public void displayHumanoidTypeView() {
-       
-        boolean done = false; // set flag to not done
-        
-        System.out.println(menu);
-        
-        do{
-            //prompt for and get players name
-            String menuOption = this.getInput();
-            if (menuOption.toUpperCase().equals("Q"))// user wants to quit
-                return; // exit game
-            
-            // do the requested action and display the next view
-            done = this. doAction(menuOption);
-            
-        }while (!done);
-    }
-
-    private String getInput() {
-        Scanner keyboard = new Scanner(System.in);//get infile for keyboard
-        String value = "";// value to be returned
-        boolean valid = false; // initalized to not valid
-        
-        while (!valid){ // loop while an invalid value is entered
-            System.out.println("\nPlease enter an option: ");
-            
-            value = keyboard.nextLine(); // get next line typed on keyboard
-            value = value.trim(); // trim off leading and trailing blanks
-            
-            if (value.length() < 1) { // value is blank
-                System.out.println("\nInvalad value: value can not be blank");
-                continue;
-            }
-            
-            break; //end the loop         
-        }
-        return value; // return the value entered
-    }
-
-    private boolean doAction(String menuOption) {
+        super("\n****************************************************"
+            + "\n*                                                  *"
+            + "\n* There are three types of humanoids in this game. *"      
+            + "\n* You must choose a type of humanoid to play with  *"
+            + "\n* as your character.                               *"
+            + "\n*                                                  *"
+            + "\n*                  A - Humanoid 1                  *"
+            + "\n*                  B - Humanoid 2                  *"
+            + "\n*                  C - Humanoid 3                  *"
+            + "\n*                                                  *"
+            + "\n****************************************************");
+    } 
+    
+    @Override
+    public boolean doAction(String menuOption) {
         menuOption = menuOption.toUpperCase(); // convert to uppercase
         
         switch (menuOption){
@@ -132,6 +92,6 @@ class HumanoidTypeView {
     
     private void displayNextView() {
         GameMenuView gameMenuView = new GameMenuView();
-        gameMenuView.displayGameMenuView();
+        gameMenuView.display();
     }
 }
