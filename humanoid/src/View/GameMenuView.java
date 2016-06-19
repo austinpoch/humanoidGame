@@ -36,7 +36,8 @@ public class GameMenuView extends View{
                 this.newLocation();
                 break;
             case "L": // view locations
-                this.viewLocations();
+                ViewLocationsView viewLocationsView = new ViewLocationsView();
+                viewLocationsView.display();
                 break;
             case "O": // view attack options
                 this.viewAttackOptions();
@@ -65,10 +66,6 @@ public class GameMenuView extends View{
     private void newLocation() {
         NewLocationView newLocationView = new NewLocationView();
         newLocationView.display();
-    }
-
-    private void viewLocations() {
-        System.out.println("\n*** viewLocations called ***");
     }
 
     private void viewAttackOptions() {

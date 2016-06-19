@@ -52,15 +52,17 @@ public class HelpMenuView extends View{
     }
 
     private void gameGoal() {
-        System.out.println("*** gameGoal called ***");
+        GameGoalView gameGoalView = new GameGoalView();
+        gameGoalView.display();
     }
 
     private void hint() {
-          System.out.println("*** hint called ***");
+        GameHintView gameHintView = new GameHintView();
+        gameHintView.display();
     }
 
     private void gameMenuView() {
-         GameMenuView gameMenuView = new GameMenuView();
-         gameMenuView.display();
+        GameMenuView gameMenuView = new GameMenuView();
+        gameMenuView.display();
     }
 }
