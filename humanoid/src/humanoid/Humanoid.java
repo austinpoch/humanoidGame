@@ -6,14 +6,8 @@
 package humanoid;
 
 import View.StartProgramView;
-import humanoidGame.AttackOptions;
-import humanoidGame.Characters;
 import humanoidGame.Game;
-import humanoidGame.Items;
-import humanoidGame.Locations;
 import humanoidGame.Player;
-import humanoidGame.Scenes;
-import humanoidGame.StartGame;
 
 /**
  *
@@ -45,6 +39,5 @@ public class Humanoid {
 
     public static void setPlayer(Player palyer) {
         Humanoid.player = palyer;
-    }
-    
+    }  
 }

@@ -19,6 +19,9 @@ public class AttackOptions {
      private boolean strengthLevelOne;
      private boolean strengthLevelTwo;
      private boolean strengthLevelThree;
+     
+     private Scenes scenes;
+     private Items items[];
 
     public AttackOptions() {
     }
@@ -93,6 +96,22 @@ public class AttackOptions {
 
     public void setStrengthLevelThree(boolean strengthLevelThree) {
         this.strengthLevelThree = strengthLevelThree;
+    }
+
+    public Scenes getScenes() {
+        return scenes;
+    }
+
+    public void setScenes(Scenes scenes) {
+        this.scenes = scenes;
+    }
+
+    public Items[] getItems() {
+        return items;
+    }
+
+    public void setItems(Items[] items) {
+        this.items = items;
     }
 
     @Override

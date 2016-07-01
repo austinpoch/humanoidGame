@@ -15,6 +15,10 @@ public class Player {
     
     private String name;
     private String humanoidType;
+    
+    private Scenes scenes;
+    private StartGame startGame[];
+    private Game game[];
 
     public Player() {
     }
@@ -33,6 +37,30 @@ public class Player {
 
     public void setHumanoidType(String humanoidType) {
         this.humanoidType = humanoidType;
+    }
+
+    public Scenes getScenes() {
+        return scenes;
+    }
+
+    public void setScenes(Scenes scenes) {
+        this.scenes = scenes;
+    }
+
+    public StartGame[] getStartGame() {
+        return startGame;
+    }
+
+    public void setStartGame(StartGame[] startGame) {
+        this.startGame = startGame;
+    }
+
+    public Game[] getGame() {
+        return game;
+    }
+
+    public void setGame(Game[] game) {
+        this.game = game;
     }
 
     @Override
