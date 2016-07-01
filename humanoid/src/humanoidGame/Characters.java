@@ -16,8 +16,6 @@ public class Characters {
     private boolean opponentTwoAlive;
     private int opponentTwoHealth;
     
-    private Scenes scenes;
-    private Game game;
 
     public Characters() {
     }
@@ -52,22 +50,6 @@ public class Characters {
 
     public void setOpponentTwoHealth(int opponentTwoHealth) {
         this.opponentTwoHealth = opponentTwoHealth;
-    }
-
-    public Scenes getScenes() {
-        return scenes;
-    }
-
-    public void setScenes(Scenes scenes) {
-        this.scenes = scenes;
-    }
-
-    public Game getGame() {
-        return game;
-    }
-
-    public void setGame(Game game) {
-        this.game = game;
     }
 
     @Override

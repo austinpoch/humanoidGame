@@ -37,8 +37,6 @@ public class Locations {
     private boolean cave;
     private boolean undergroundLayer;
     
-    private Scenes scenes;
-    private Items items[];
 
     public Locations() {
     }
@@ -243,22 +241,6 @@ public class Locations {
         this.undergroundLayer = undergroundLayer;
     }
 
-    public Scenes getScenes() {
-        return scenes;
-    }
-
-    public void setScenes(Scenes scenes) {
-        this.scenes = scenes;
-    }
-
-    public Items[] getItems() {
-        return items;
-    }
-
-    public void setItems(Items[] items) {
-        this.items = items;
-    }
-
     @Override
     public int hashCode() {
         int hash = 7;
@@ -383,19 +365,5 @@ public class Locations {
             return false;
         }
         return true;
-    }
-
-    public void setColumn(int column) {
-        System.out.println("*** setColumn function called ***");
-    }
-
-    public void setRow(int row) {
-        System.out.println("*** setRow function called ***");
-    }
-    
-    public void setVisited(boolean b) {
-        System.out.println("*** setVisited function called ***");
-    }
-    
-            
+    }       
 }

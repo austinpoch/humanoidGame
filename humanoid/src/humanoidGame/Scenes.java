@@ -23,11 +23,6 @@ public class Scenes {
     private boolean attackOpponent;
     private boolean locations;
       
-    private Player player;
-    private Items items;
-    private Characters characters[];
-    private Locations location[];
-    private AttackOptions attackOptions[];
     
     public Scenes() {
         
@@ -103,87 +98,6 @@ public class Scenes {
 
     public void setLocations(boolean locations) {
         this.locations = locations;
-    }
-
-    public Player getPlayer() {
-        return player;
-    }
-
-    public void setPlayer(Player player) {
-        this.player = player;
-    }
-
-    public Items getItems() {
-        return items;
-    }
-
-    public void setItems(Items items) {
-        this.items = items;
-    }
-
-    public Characters[] getCharacters() {
-        return characters;
-    }
-
-    public void setCharacters(Characters[] characters) {
-        this.characters = characters;
-    }
-
-    public Locations[] getLocation() {
-        return location;
-    }
-
-    public void setLocation(Locations[] location) {
-        this.location = location;
-    }
-
-    public AttackOptions[] getAttackOptions() {
-        return attackOptions;
-    }
-
-    public void setAttackOptions(AttackOptions[] attackOptions) {
-        this.attackOptions = attackOptions;
-    }
-    
-    public enum SceneType {
-
-        startProgram,
-        gameGoal,
-        hint,
-        viewLocations,
-        viewInventory,
-        viewAttackOptions,
-        viewEveryonesHealth,
-        attackOpponent,
-        items,
-        characters,
-        location,
-        attackOptions,
-        city,
-        home,
-        hotel,
-        house,
-        skyScraper,
-        bar,
-        car,
-        school,
-        town,
-        goldMine,
-        ironShop,
-        silverMine,
-        saloon,
-        gunShop,
-        groceryStore,
-        forest,
-        mountain,
-        magicShop,
-        fireDungeon,
-        iceDungeon,
-        windDungeon,
-        sky,
-        beaverDam,
-        cave,
-        undergroundLayer
     }
     
     @Override

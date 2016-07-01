@@ -28,10 +28,7 @@ public class Items {
     private int strengthItemFour;
     private int strengthItemFive;
     
-    private Scenes scenes;
-    private Locations locations[];
-    private AttackOptions attackOptions;
-
+    
     public Items() {
     }
 
@@ -161,30 +158,6 @@ public class Items {
 
     public void setStrengthItemFive(int strengthItemFive) {
         this.strengthItemFive = strengthItemFive;
-    }
-
-    public Scenes getScenes() {
-        return scenes;
-    }
-
-    public void setScenes(Scenes scenes) {
-        this.scenes = scenes;
-    }
-
-    public Locations[] getLocations() {
-        return locations;
-    }
-
-    public void setLocations(Locations[] locations) {
-        this.locations = locations;
-    }
-
-    public AttackOptions getAttackOptions() {
-        return attackOptions;
-    }
-
-    public void setAttackOptions(AttackOptions attackOptions) {
-        this.attackOptions = attackOptions;
     }
 
     @Override

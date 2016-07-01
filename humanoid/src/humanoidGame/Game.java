@@ -20,9 +20,6 @@ public class Game implements Serializable{
     private boolean selfAlive;
     private int selfHealth;
     
-    private Player player;
-    private Characters characters[];
-
     public Game() {
     }
 
@@ -48,22 +45,6 @@ public class Game implements Serializable{
 
     public void setSelfHealth(int selfHealth) {
         this.selfHealth = selfHealth;
-    }
-
-    public Player getPlayer() {
-        return player;
-    }
-
-    public void setPlayer(Player player) {
-        this.player = player;
-    }
-
-    public Characters[] getCharacters() {
-        return characters;
-    }
-
-    public void setCharacters(Characters[] characters) {
-        this.characters = characters;
     }
 
     @Override
@@ -106,15 +87,5 @@ public class Game implements Serializable{
 
     public String toStirng() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setInventory(GameControl.InventoryItem[] inventoryList) {
-        System.out.println("*** setInventory function called ***");
-    }
-
-    public void setMap(MapControl mapControl) {
-        System.out.println("*** setMap function called ***");
-    }
-    
-    
+    } 
 }

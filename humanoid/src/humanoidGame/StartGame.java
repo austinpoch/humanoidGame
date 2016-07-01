@@ -16,8 +16,7 @@ public class StartGame implements Serializable{
     private boolean humanoidOne;
     private boolean humanoidTwo;
     private boolean humanoidThree;
-    
-    private Player player;
+   
 
     public StartGame() {
     }
@@ -44,14 +43,6 @@ public class StartGame implements Serializable{
 
     public void setHumanoidThree(boolean humanoidThree) {
         this.humanoidThree = humanoidThree;
-    }
-
-    public Player getPlayer() {
-        return player;
-    }
-
-    public void setPlayer(Player player) {
-        this.player = player;
     }
     
     @Override
